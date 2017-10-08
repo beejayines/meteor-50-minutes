@@ -9,7 +9,7 @@ if (Meteor.isClient) {
 
   Template.tasks.events({
     "submit .add-task": function(event) {
-      let name = event.target.name.value;
+      var name = event.target.name.value;
       Tasks.insert({
         name: name, createdAt: new Date()
       });
